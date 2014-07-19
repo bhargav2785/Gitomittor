@@ -1,7 +1,8 @@
 #!/bin/bash
 
-####### @author Bhargav Vadher   ########
-####### @version V1.0 2014-07-17 ########
+####### @author Bhargav Vadher   ########################
+####### @version V1.0 2014-07-17 ########################
+####### @license WTFPL (http://www.wtfpl.net/) ##########
 
 # arguments check
 if [[ $# -lt 2 ]]; then
@@ -17,6 +18,7 @@ LOOKUP_DIR="$1";
 TOP_COUNT="$2";
 TMP_FILE='/tmp/commit.logs.out';
 TOP_FILES_COUNT=100;
+FILE_TYPE_LIST="py,php,js,scss,css,feature,txt,tpl";
 
 # make sure the lookup directory is a git repo
 if [[ ! -d "$1/.git" ]]; then
@@ -25,7 +27,7 @@ if [[ ! -d "$1/.git" ]]; then
 fi
 
 # get file types from terminal param. If not provided, use all
-FILE_TYPES=$([[ $3 == "" ]] && echo "py,php,js,scss,css,feature,txt,tpl" || echo "$3");
+FILE_TYPES=$([[ $3 == "" ]] && echo "${FILE_TYPE_LIST}" || echo "$3");
 
 # convert filetypes into an array
 FILE_TYPES_ARR=$(echo ${FILE_TYPES} | tr "," " ");
