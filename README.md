@@ -1,3 +1,7 @@
+Github.io link
+===
+Go to beautiful [github.io](http://bhargav2785.github.io/Gitomittor/ "Gitomittor") version.
+
 What is Gitomittor?
 ===
 Gitomittor is made of two words `Git + Commitor`. It is simply a shell script that runs bunch of commands and finds most commited files as well as top commitor on those files.
